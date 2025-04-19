@@ -1,6 +1,7 @@
 {
-    "name": "maya-b.github.io",
-    "version": "0.0.0",
+    "name": "b-maya.github.io",
+    "version": "1.0.0",
+    "homepage": "https://b-maya.github.io/",
     "private": true,
     "type": "module",
     "scripts": {
@@ -8,6 +9,8 @@
         "build": "run-p type-check \"build-only {@}\" --",
         "preview": "vite preview",
         "build-only": "vite build",
+        "predeploy": "npm run build-only",
+        "deploy": "gh-pages -d dist",
         "type-check": "vue-tsc --build",
         "lint:oxlint": "oxlint . --fix -D correctness --ignore-path .gitignore",
         "lint:eslint": "eslint . --fix",
@@ -35,6 +38,7 @@
         "eslint": "^9.22.0",
         "eslint-plugin-oxlint": "^0.16.0",
         "eslint-plugin-vue": "~10.0.0",
+        "gh-pages": "^6.3.0",
         "jiti": "^2.4.2",
         "npm-run-all2": "^7.0.2",
         "oxlint": "^0.16.0",
