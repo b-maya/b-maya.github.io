@@ -23,12 +23,12 @@
             :key="`sidebar-option-icon-${option.label}`"
             :to="option.path"
         >
-            <button
+            <GenericButton
                 :disabled="currentPath === option.path"
                 @click="onSelect()"
                 @pointerover="sm && onPointerIn(index)"
                 @pointerleave="sm && onPointerLeave()"
-                class="group flex w-full items-center gap-2 rounded-lg p-2 transition-all enabled:cursor-pointer sm:w-auto"
+                class="group flex w-full items-center gap-2 sm:w-auto"
                 :class="[
                     currentPath === option.path || mouseOverIndex === index
                         ? 'bg-primary text-black'
@@ -38,7 +38,7 @@
             >
                 <MdiIcon :icon="option.icon" :class="cn('h-6 w-6 text-inherit transition-all')" />
                 <span v-if="!sm" class="text-inherit">{{ option.label }}</span>
-            </button>
+            </GenericButton>
         </RouterLink>
         <Transition
             enter-from-class="w-0 opacity-0"
@@ -53,7 +53,7 @@
                 :class="
                     cn(
                         'absolute top-0 left-full flex h-full w-64 flex-col items-start gap-4 overflow-hidden py-2 pr-2',
-                        'bg-gradient-to-r from-black/70 to-black/20',
+                        'bg-gradient-to-r from-black/70 to-black/40',
                     )
                 "
             >
@@ -63,23 +63,20 @@
                     :to="option.path"
                     class="w-full"
                 >
-                    <button
+                    <GenericButton
                         @click="onSelect()"
                         :class="
-                            cn(
-                                'w-full rounded-r-lg p-2 text-white transition-all enabled:cursor-pointer',
-                                {
-                                    'bg-primary text-black':
-                                        currentPath !== option.path && mouseOverIndex === index,
-                                },
-                            )
+                            cn('w-full rounded-none rounded-r-lg pl-4 text-start text-white', {
+                                'bg-primary text-black':
+                                    currentPath !== option.path && mouseOverIndex === index,
+                            })
                         "
                         @pointerover="sm && onPointerIn(index)"
                         @pointerleave="sm && onPointerLeave()"
                         :disabled="currentPath === option.path"
                     >
                         {{ option.label }}
-                    </button>
+                    </GenericButton>
                 </RouterLink>
             </div>
         </Transition>
@@ -97,6 +94,7 @@ import { type ClassValue } from 'clsx';
 import { onClickOutside, useBreakpoints, breakpointsTailwind } from '@vueuse/core';
 import { useRoute } from 'vue-router';
 import MenuToggleButton from './MenuToggleButton.vue';
+import GenericButton from './inputs/GenericButton.vue';
 
 type SidebarCompOption = {
     icon: string;

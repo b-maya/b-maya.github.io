@@ -1,8 +1,8 @@
 <template>
-    <button
+    <GenericButton
         :class="
             cn(
-                'text-primary rounded-lg bg-black p-2 transition-all',
+                'text-primary bg-black',
                 {
                     'rotate-90 bg-black/0': isOpen,
                 },
@@ -12,7 +12,7 @@
         @click="isOpen = !isOpen"
     >
         <MdiIcon :icon="isOpen ? mdiClose : mdiMenu" class="h-6 w-6 text-inherit transition-all" />
-    </button>
+    </GenericButton>
 </template>
 
 <script setup lang="ts">
@@ -22,6 +22,7 @@ import { computed } from 'vue';
 import { mdiMenu, mdiClose } from '@mdi/js';
 
 import MdiIcon from './MdiIcon.vue';
+import GenericButton from './inputs/GenericButton.vue';
 
 type MenuToggleButtonProps = {
     class?: ClassValue;

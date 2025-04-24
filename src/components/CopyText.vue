@@ -1,10 +1,10 @@
 <template>
-    <button
+    <GenericButton
         :disabled="copied"
         @click.stop="doCopy"
         :class="
             cn(
-                'group flex items-center gap-2 rounded-lg p-2 enabled:cursor-pointer enabled:hover:bg-black/70',
+                'group flex items-center gap-2 enabled:hover:bg-black/70',
                 'enabled:hover:text-primary text-black',
             )
         "
@@ -14,7 +14,7 @@
             :icon="copied ? mdiCheckCircle : mdiContentCopy"
             :class="cn('h-5 w-5', copied ? 'text-green-600' : 'text-inherit', inheritedClasses)"
         />
-    </button>
+    </GenericButton>
 </template>
 
 <script setup lang="ts">
@@ -23,6 +23,7 @@ import { cn } from 'clsx-for-tailwind';
 import { type ClassValue } from 'clsx';
 import MdiIcon from './MdiIcon.vue';
 import { computed, ref } from 'vue';
+import GenericButton from './inputs/GenericButton.vue';
 
 type CopyTextProps = {
     text: string;

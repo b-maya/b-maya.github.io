@@ -1,8 +1,7 @@
 <template>
-    <div class="flex w-full flex-col gap-4 sm:gap-6 md:gap-8">
-        <button
-            class="bg-primary/95 flex w-full cursor-pointer flex-col items-baseline gap-2 p-4 pb-0 sm:flex-row sm:gap-6 md:gap-8"
-            :class="{ 'sticky top-0 left-0': contentIsVisible }"
+    <div class="relative mb-8 flex w-full flex-col gap-4 sm:gap-6 md:gap-8">
+        <div
+            class="bg-primary/95 sticky top-0 left-0 flex w-full cursor-pointer flex-col items-baseline gap-2 p-4 pb-0 sm:flex-row sm:gap-6 md:gap-8"
             @click.stop="setVisibility(!isVisible)"
         >
             <RespText
@@ -13,35 +12,50 @@
             <RespText size="sm" class="font-light whitespace-nowrap sm:font-normal">
                 {{ date }}
             </RespText>
-        </button>
-        <div ref="projectContentRef" class="w-full p-4 pt-0">
-            <Transition
-                enter-from-class="h-0"
-                enter-active-class="transition-all duration-500"
-                enter-to-class="h-full"
-                leave-from-class="h-full"
-                leave-active-class="transition-all duration-500"
-                leave-to-class="h-0"
+        </div>
+        <div
+            class="flex w-full flex-col justify-between overflow-hidden p-4 pt-0 transition-all duration-500"
+            :class="[isVisible ? '' : 'h-20']"
+            :style="[isVisible ? `height:${contentHeight}px` : '']"
+        >
+            <div
+                ref="contentRef"
+                class="w-full border-l-2 border-solid border-violet-500 pb-8 pl-4"
             >
+                <slot />
                 <div
-                    v-show="isVisible"
-                    class="w-full overflow-hidden border-l-2 border-solid border-violet-500 pl-4 transition-all duration-500"
-                >
-                    <slot />
-                </div>
-            </Transition>
-
-            <div v-if="!isVisible" class="w-full">
-                <slot name="short" />
+                    v-if="!isVisible"
+                    :class="
+                        cn(
+                            'absolute top-0 left-0 z-0 flex h-full w-full cursor-pointer flex-col items-center justify-end transition-all',
+                            'from-primary/0 to-primary/100 via-primary/0 bg-gradient-to-b via-40%',
+                        )
+                    "
+                    @click.stop="setVisibility(!isVisible)"
+                />
             </div>
         </div>
+        <GenericButton
+            :class="
+                cn(
+                    'absolute top-full left-1/2 z-10 mt-2 -translate-x-1/2',
+                    'self-center rounded-2xl bg-violet-400 px-1 py-0.5 text-sm',
+                    'opacity-50 hover:opacity-100 active:opacity-100',
+                )
+            "
+            @click.stop="setVisibility(!isVisible)"
+        >
+            {{ isVisible ? 'Show less' : 'Show more' }}
+        </GenericButton>
     </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
 import RespText from '../RespText.vue';
-import { useElementVisibility } from '@vueuse/core';
+import GenericButton from '../inputs/GenericButton.vue';
+import { cn } from 'clsx-for-tailwind';
+import { useElementSize } from '@vueuse/core';
 
 type ProjectInfoProps = {
     title: string;
@@ -54,13 +68,13 @@ defineOptions({
 
 defineProps<ProjectInfoProps>();
 
-const projectContentRef = ref();
-
-const contentIsVisible = useElementVisibility(projectContentRef, { rootMargin: '0px 0px -100px' });
-
 const isVisible = ref(false);
 
 const setVisibility = (state: boolean): void => {
     isVisible.value = state;
 };
+
+const contentRef = ref();
+
+const { height: contentHeight } = useElementSize(contentRef);
 </script>

@@ -3,4 +3,5 @@
 @theme {
     --color-primary: var(--color-violet-200);
     --color-secondary: var(--color-red-200);
+    --color-highlight: var(--color-violet-300);
 }

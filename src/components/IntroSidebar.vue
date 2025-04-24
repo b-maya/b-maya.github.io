@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import { mdiHome, mdiAccount, mdiShape } from '@mdi/js';
+import { mdiHome, mdiAccount, mdiShape, mdiTestTube } from '@mdi/js';
 import { ref } from 'vue';
 
 import SidebarComp from './SidebarComp.vue';
@@ -27,6 +27,11 @@ const sections = ref([
         label: 'Portfolio',
         icon: mdiShape,
         path: '/portfolio',
+    },
+    {
+        label: 'Trial',
+        icon: mdiTestTube,
+        path: '/trial',
     },
 ]);
 </script>

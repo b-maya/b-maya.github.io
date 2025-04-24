@@ -12,7 +12,17 @@
             <MdiIcon :icon="GMAIL_ICON" class="group-hover:text-primary h-10 w-10 text-black" />
         </a>
         <div class="flex items-center gap-2">
+            <CopyText v-if="sm" text="+31-616197650">
+                <span class="flex items-center gap-2">
+                    <MdiIcon
+                        :icon="mdiPhone"
+                        class="group-hover:text-primary h-10 w-10 text-black"
+                    />
+                    <p class="text-lg">+31-616197650</p>
+                </span>
+            </CopyText>
             <a
+                v-else
                 href="tel:+31-616197650"
                 title="Mobile: +31-616197650"
                 target="_blank"
@@ -23,9 +33,6 @@
                     class="group-hover:text-primary h-10 w-10 text-black"
                 />
             </a>
-            <CopyText v-if="sm" text="+31-616197650">
-                <p class="text-lg">+31-616197650</p>
-            </CopyText>
         </div>
         <a
             href="https://www.linkedin.com/in/maya-balasubramanya-8ba38546/"
@@ -39,7 +46,7 @@
 </template>
 
 <script setup lang="ts">
-import { mdiPhoneDial } from '@mdi/js';
+import { mdiPhone, mdiPhoneDial } from '@mdi/js';
 import MdiIcon from './MdiIcon.vue';
 import CopyText from './CopyText.vue';
 import { breakpointsTailwind, useBreakpoints } from '@vueuse/core';
