@@ -10,7 +10,7 @@ import { cn } from 'clsx-for-tailwind';
 import { computed } from 'vue';
 
 type TextSize = 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl';
-type TextTags = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p';
+export type TextTags = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'li';
 
 const SIZE_CLASSES: Record<TextSize, string> = {
     '7xl': 'text-7xl',

@@ -18,14 +18,20 @@
 
 <script setup lang="ts">
 import { useElementSize, useScroll } from '@vueuse/core';
-import { computed, ref } from 'vue';
+import { computed, onMounted, onUnmounted, ref } from 'vue';
 import GenericButton from './inputs/GenericButton.vue';
 import MdiIcon from './MdiIcon.vue';
 import { mdiArrowUp, mdiArrowDown } from '@mdi/js';
 
+type SnapSectionEmits = {
+    scrolledTo: [];
+};
+
 defineOptions({
     name: 'SnapSection',
 });
+
+const emits = defineEmits<SnapSectionEmits>();
 
 const sectionRef = ref<HTMLDivElement>();
 
@@ -41,4 +47,25 @@ const scrollUp = () => {
 const scrollDown = () => {
     scrollY.value = scrollY.value + height.value;
 };
+
+const observer = new IntersectionObserver(
+    ([entry]) => {
+        if (entry.isIntersecting) {
+            emits('scrolledTo');
+        }
+    },
+    {
+        threshold: 0.6,
+    },
+);
+
+onMounted(() => {
+    if (sectionRef.value) {
+        observer.observe(sectionRef.value);
+    }
+});
+
+onUnmounted(() => {
+    observer.disconnect();
+});
 </script>

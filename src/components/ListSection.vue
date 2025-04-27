@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col justify-center gap-4">
-        <RespText size="lg" class="font-light"> {{ title }} </RespText>
+        <RespText :as="titleAs" size="lg" class="font-light"> {{ title }} </RespText>
         <div class="flex w-full flex-wrap gap-3" :class="[isVertical ? 'flex-col' : 'flex-row']">
             <RespText
                 v-for="item in items"
@@ -15,11 +15,12 @@
 </template>
 
 <script setup lang="ts">
-import RespText from '@/components/RespText.vue';
+import RespText, { type TextTags } from '@/components/RespText.vue';
 import { computed } from 'vue';
 
 type ListSectionProps = {
     title: string;
+    titleAs?: TextTags;
     items: string[];
     alignment?: 'vertical' | 'horizontal';
 };

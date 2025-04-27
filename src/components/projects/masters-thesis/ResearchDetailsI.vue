@@ -2,11 +2,13 @@
     <SnapSection class="flex flex-col justify-evenly gap-4 p-8">
         <ListSection
             title="Research Areas:"
+            title-as="h2"
             :items="['Speculative critical design (SCD)', 'Co-design', 'Participatory methods']"
             alignment="horizontal"
         />
         <ListSection
             title="SCD Research Probes Used:"
+            title-as="h2"
             :items="[
                 'Counterfactual scenario',
                 'Repurposed futures wheel as a counterfactual scenarios wheel',
@@ -16,6 +18,7 @@
         />
         <ListSection
             title="User Research Methods:"
+            title-as="h2"
             :items="['Semi-structured interviews', 'Focus group']"
             alignment="horizontal"
         />

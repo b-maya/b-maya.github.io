@@ -1,5 +1,5 @@
 <template>
-    <div class="h-full w-full snap-y snap-mandatory overflow-auto bg-white/50">
+    <div class="h-full w-full snap-y snap-mandatory overflow-auto bg-white/70">
         <SnapSection class="flex flex-col">
             <div
                 class="from-highlight to-highlight/80 sticky top-0 left-0 flex w-full flex-col items-center bg-gradient-to-b from-50% py-2"
@@ -42,6 +42,14 @@
         </SnapSection>
         <ResearchDetailsI />
         <ResearchDetailsII />
+        <ResearchQuestion />
+        <SubResearchQuestions />
+        <MethodologyFlow />
+        <ResearchProbe1 />
+        <ResearchProbe2 />
+        <ResearchProbe3 />
+        <ResultsPageI />
+        <ResultsPageII />
     </div>
 </template>
 
@@ -51,6 +59,14 @@ import MASTERS_THESIS_INFO from '@/definitions/masters-thesis-info';
 import SnapSection from '../../SnapSection.vue';
 import ResearchDetailsI from './ResearchDetailsI.vue';
 import ResearchDetailsII from './ResearchDetailsII.vue';
+import ResearchQuestion from './ResearchQuestion.vue';
+import SubResearchQuestions from './SubResearchQuestions.vue';
+import MethodologyFlow from './MethodologyFlow.vue';
+import ResearchProbe1 from './ResearchProbe1.vue';
+import ResearchProbe2 from './ResearchProbe2.vue';
+import ResearchProbe3 from './ResearchProbe3.vue';
+import ResultsPageI from './ResultsPageI.vue';
+import ResultsPageII from './ResultsPageII.vue';
 
 defineOptions({
     name: 'MastersThesis',
