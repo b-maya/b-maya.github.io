@@ -1,7 +1,7 @@
 <template>
     <div
         ref="parentRef"
-        class="flex h-full max-h-full w-full max-w-full items-center justify-center"
+        class="absolute top-0 left-0 flex h-full max-h-full w-full max-w-full items-center justify-center"
     >
         <div
             class="flex h-full rounded-lg outline-4 outline-white transition-all duration-500 dark:bg-gray-950/50"

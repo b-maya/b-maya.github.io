@@ -47,6 +47,11 @@
             </RespText>
         </SnapSection>
         <ArtefactI />
+        <FocusGroupInsights />
+        <IndividualAssignment />
+        <ArtefactII />
+        <LuciferXTouwristI />
+        <LuciferXTouwristII />
     </div>
 </template>
 
@@ -56,6 +61,11 @@ import POLICING_TRACKABLE_PASS_INFO from '@/definitions/policing-trackable-pass-
 import SnapSection from '../../SnapSection.vue';
 
 import ArtefactI from './ArtefactI.vue';
+import ArtefactII from './ArtefactII.vue';
+import FocusGroupInsights from './FocusGroupInsights.vue';
+import IndividualAssignment from './IndividualAssignment.vue';
+import LuciferXTouwristI from './LuciferXTouwristI.vue';
+import LuciferXTouwristII from './LuciferXTouwristII.vue';
 
 defineOptions({
     name: 'PolicingTrackablePass',

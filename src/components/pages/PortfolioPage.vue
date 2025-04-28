@@ -1,5 +1,5 @@
 <template>
-    <div class="flex max-h-full w-full flex-col gap-2 overflow-x-hidden overflow-y-auto">
+    <div class="flex max-h-full w-full flex-col overflow-x-hidden overflow-y-auto">
         <MastersThesisCard :index="1" order="n-d-i" />
         <PolicingTrackablePassCard :index="2" order="n-d-i" />
     </div>

@@ -8,7 +8,7 @@
             <template v-for="(textBox, index) in textBoxes" :key="`text-${index}`">
                 <EnterTransition :transitionClasses="textBox.transitionClasses" :show="showFlows">
                     <div
-                        class="relative max-w-44 content-center rounded-lg border-1 border-solid border-violet-600 p-3 text-center transition"
+                        class="relative max-w-full content-center rounded-lg border-1 border-solid border-violet-600 p-3 text-center transition sm:max-w-44"
                     >
                         <RespText size="base" class="my-auto font-light">
                             <template

@@ -1,6 +1,6 @@
 <template>
     <GenericButton
-        class="group flex w-full gap-2 rounded-none p-0 hover:bg-violet-400 active:bg-violet-400 sm:gap-4 md:gap-8 lg:gap-8"
+        class="group flex w-full gap-2 rounded-none p-2 hover:bg-violet-400 active:bg-violet-400 sm:gap-4 md:gap-8 lg:gap-8"
         @click.stop="onClick"
     >
         <RowReorderer :order="ordering">
@@ -29,11 +29,11 @@
                     <div class="flex w-full flex-wrap items-baseline gap-2">
                         <RespText
                             size="xl"
-                            class="bg-highlight/80 rounded-r-lg py-1 pr-2 font-light whitespace-nowrap"
+                            class="bg-highlight/80 rounded-r-lg py-1 pr-2 text-start font-light sm:whitespace-nowrap"
                         >
                             {{ title }}
                         </RespText>
-                        <RespText size="sm" class="font-light whitespace-nowrap sm:font-normal">
+                        <RespText size="sm" class="font-light sm:font-normal sm:whitespace-nowrap">
                             {{ date }}
                         </RespText>
                     </div>
