@@ -1,5 +1,5 @@
 <template>
-    <div ref="photoRef" class="shrink-0 snap-center first:ml-10 last:mr-10">
+    <div ref="photoRef" class="relative shrink-0 snap-center first:ml-10 last:mr-10">
         <ImageModaller :src="image.src" :alt="image.alt">
             <template #default="{ showModal }">
                 <img
@@ -12,16 +12,25 @@
                 />
             </template>
         </ImageModaller>
+        <RespText
+            v-if="image.withCaption"
+            size="xs"
+            class="bg-primary/80 pointer-events-none absolute bottom-0 left-1/2 w-full -translate-x-1/2 rounded-t-lg py-1 text-center leading-5 text-black"
+        >
+            {{ image.alt }}
+        </RespText>
     </div>
 </template>
 
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref } from 'vue';
 import ImageModaller from './ImageModaller.vue';
+import RespText from '../RespText.vue';
 
 export type ImageDetails = {
     src: string;
     alt: string;
+    withCaption?: boolean;
 };
 
 type PhotoImageProps = {

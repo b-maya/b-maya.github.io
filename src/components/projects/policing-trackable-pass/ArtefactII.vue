@@ -32,14 +32,17 @@ const images = [
     {
         src: Artefact2_1,
         alt: 'The trackable wristband with the display screen obscured.',
+        withCaption: true,
     },
     {
         src: Artefact2_2,
         alt: 'Entry denied - a red light is displayed.',
+        withCaption: true,
     },
     {
         src: Artefact2_3,
         alt: 'Entry permitted - a green light is displayed.',
+        withCaption: true,
     },
 ];
 </script>

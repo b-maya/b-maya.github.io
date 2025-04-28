@@ -29,13 +29,13 @@
                 <RespText size="lg" class="px-8 font-light"> Part 1: Group Assignment </RespText>
                 <RespText size="base" class="px-8">
                     The first part was a group assignment was to pick a sub-theme within ‘Politics
-                    and Democracy’ and create a provocative artefact (or Provocatype) futuristic
-                    artefact and conducted focus groups, as the user research method, to gather
-                    reactions and comments about the artefact from participants.
+                    and Democracy’ and create a provocative futuristic artefact. We then had to
+                    conduct focus groups for user research, and gather reactions and comments about
+                    the artefact from the focus group participants.
                 </RespText>
             </div>
             <RespText size="base" class="px-8">
-                The sub-theme <em>‘Censorship in authoritarian regimes’</em> was chosen.
+                The sub-theme <em>‘censorship in authoritarian regimes’</em> was chosen.
             </RespText>
         </SnapSection>
         <SnapSection class="flex flex-col justify-center gap-4">
