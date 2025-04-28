@@ -18,7 +18,7 @@
 import SnapSection from '@/components/SnapSection.vue';
 import RespText from '@/components/RespText.vue';
 
-import Artefact1_1 from '@/assets/images/projects/policing-via-a-trackable-pass/artefact-1-1.jpg';
+import Artefact1_1 from '@/assets/images/projects/policing-via-a-trackable-pass/artefact-1-1.png';
 import Artefact1_2 from '@/assets/images/projects/policing-via-a-trackable-pass/artefact-1-2.jpg';
 import Artefact1_3 from '@/assets/images/projects/policing-via-a-trackable-pass/artefact-1-3.png';
 import PhotoRoll from '@/components/photo-reel/PhotoRoll.vue';
