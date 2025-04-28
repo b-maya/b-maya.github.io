@@ -6,19 +6,25 @@
         <div class="w-full self-center overflow-hidden">
             <ImageModaller :src="InterPlay1" alt="Empathy Map">
                 <template #default="{ showModal }">
-                    <img
-                        :src="InterPlay1"
-                        class="m-auto h-auto w-full cursor-pointer object-contain md:h-full md:w-auto"
-                        alt="Citizen pressing a button on ‘Lucifer’ to report an anomaly"
-                        @click="showModal"
-                    />
+                    <div class="flex flex-col items-center gap-2">
+                        <img
+                            :src="InterPlay1"
+                            class="m-auto h-auto w-full cursor-pointer object-contain md:h-full md:w-auto"
+                            alt="Citizen pressing a button on ‘Lucifer’ to report an anomaly"
+                            @click="showModal"
+                        />
+                        <RespText
+                            size="xs"
+                            class="shrink text-center font-light text-wrap md:w-3/5"
+                        >
+                            Fig. Citizen pressing a button on ‘Lucifer’ to report an anomaly. As the
+                            ‘Tou-wrist’ is trackable, the authorities can locate the rule- breaker
+                            in real time.
+                        </RespText>
+                    </div>
                 </template>
             </ImageModaller>
         </div>
-        <RespText size="base">
-            Citizen pressing a button on ‘Lucifer’ to report an anomaly. As the ‘Tou-wrist’ is
-            trackable, the authorities can locate the rule- breaker in real time.
-        </RespText>
     </SnapSection>
 </template>
 

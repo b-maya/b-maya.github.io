@@ -1,5 +1,5 @@
 <template>
-    <div class="h-full w-full snap-y snap-mandatory overflow-auto bg-white/70">
+    <div class="h-full w-full snap-y snap-mandatory overflow-auto bg-white/90">
         <SnapSection class="flex flex-col">
             <div
                 class="from-highlight to-highlight/80 sticky top-0 left-0 flex w-full flex-col items-center bg-gradient-to-b from-50% py-2"
@@ -21,7 +21,7 @@
             </div>
         </SnapSection>
 
-        <SnapSection class="flex flex-col justify-evenly gap-4">
+        <SnapSection class="flex flex-col justify-center gap-8">
             <RespText size="base" class="px-8">
                 The assignment for the course ‘Design Research’ was divided into two parts.
             </RespText>

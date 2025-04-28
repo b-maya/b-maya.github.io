@@ -4,8 +4,8 @@
         :class="[vertical ? 'flex-col gap-2' : 'w-full gap-8']"
     >
         <a
-            href="mailto:maya23.11@gmail.com"
-            title="mailto:maya23.11@gmail.com"
+            href="mailto:maya.b.researcher@gmail.com"
+            title="mailto:maya.b.researcher@gmail.com"
             target="_blank"
             class="group rounded-lg p-2 hover:bg-black/70"
         >

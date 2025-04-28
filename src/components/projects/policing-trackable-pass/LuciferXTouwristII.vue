@@ -6,18 +6,24 @@
         <div class="w-full self-center overflow-hidden">
             <ImageModaller :src="InterPlay2" alt="Empathy Map">
                 <template #default="{ showModal }">
-                    <img
-                        :src="InterPlay2"
-                        class="m-auto h-auto w-full cursor-pointer object-contain md:h-full md:w-auto"
-                        alt="Citizen reports a citizen for waving back a tourists."
-                        @click="showModal"
-                    />
+                    <div class="flex flex-col items-center gap-2">
+                        <img
+                            :src="InterPlay2"
+                            class="m-auto h-auto w-full cursor-pointer object-contain md:h-full md:w-auto"
+                            alt="Citizen reports a citizen for waving back a tourists."
+                            @click="showModal"
+                        />
+                        <RespText
+                            size="xs"
+                            class="shrink text-center font-light text-wrap md:w-3/5"
+                        >
+                            Fig. A citizen waves back at tourists. Another citizen reports this
+                            activity.
+                        </RespText>
+                    </div>
                 </template>
             </ImageModaller>
         </div>
-        <RespText size="base">
-            A citizen waves back at tourists. Another citizen reports this activity.
-        </RespText>
     </SnapSection>
 </template>
 

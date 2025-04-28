@@ -12,7 +12,7 @@
             >
                 <RespText as="h1" size="2xl"> Maya Balasubramanya </RespText>
                 <RespText as="p" size="base">
-                    CONTENT DESIGNER & STRATEGIST | USER (UX) RESEARCHER
+                    QUALITATIVE RESEARCHER | CONTENT DESIGNER & STRATEGIST | UX RESEARCHER
                 </RespText>
                 <RespText as="p" size="base">
                     <strong>MSc</strong> in

@@ -3,19 +3,19 @@
         <ListSection
             title="My Role:"
             title-as="h2"
-            :items="['Independent qualitative researcher']"
-            alignment="horizontal"
-        />
-        <ListSection
-            title="Software Tools Used:"
-            title-as="h2"
-            :items="['ATLAS.ti', 'Figma', 'Canva']"
+            :items="['Qualitative researcher']"
             alignment="horizontal"
         />
         <ListSection
             title="Data Analysis Method:"
             title-as="h2"
-            :items="['Thematic Analysis']"
+            :items="['Thematic analysis']"
+            alignment="horizontal"
+        />
+        <ListSection
+            title="Software Tools Used:"
+            title-as="h2"
+            :items="['ATLAS.ti', 'Figma', 'Canva', 'Jamovi', 'Qualtrics']"
             alignment="horizontal"
         />
     </SnapSection>

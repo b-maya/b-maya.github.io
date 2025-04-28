@@ -34,11 +34,11 @@ const images = [
     },
     {
         src: Artefact1_2,
-        alt: 'Finished prototype - Lucifer',
+        alt: 'Low-fidelity prototype of Lucifer',
     },
     {
         src: Artefact1_3,
-        alt: 'Lucifer ON',
+        alt: 'Medium-fidelity prototype in use',
     },
 ];
 </script>
