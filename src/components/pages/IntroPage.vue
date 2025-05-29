@@ -15,9 +15,8 @@
                     DESIGN RESEARCHER | CONTENT DESIGNER & STRATEGIST | UX RESEARCHER
                 </RespText>
                 <RespText as="p" size="base">
-                    <strong>MSc</strong> in
-                    <strong>Communication and Information Sciences</strong> (New Media Design),
-                    Tilburg University
+                    <strong>MSc</strong> in <strong>New Media Design</strong>, Tilburg University,
+                    Netherlands
                 </RespText>
                 <ContactInfo class="sm:pt-8" />
             </div>

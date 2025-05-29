@@ -1,7 +1,7 @@
 <template>
     <div class="relative mb-8 flex w-full flex-col gap-4 sm:gap-6 md:gap-8">
         <div
-            class="bg-primary/95 sticky top-0 left-0 flex w-full cursor-pointer flex-col items-baseline gap-2 p-4 pb-0 sm:flex-row sm:gap-6 md:gap-8"
+            class="bg-primary/95 sticky top-0 left-0 z-10 flex w-full cursor-pointer flex-col items-baseline gap-2 p-4 pb-0 sm:flex-row sm:gap-6 md:gap-8"
             @click.stop="setVisibility(!isVisible)"
         >
             <RespText

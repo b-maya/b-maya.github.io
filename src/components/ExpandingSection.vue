@@ -1,7 +1,7 @@
 <template>
     <div class="relative mb-8 flex w-full flex-col gap-4 sm:gap-6 md:gap-8">
         <GenericButton
-            class="sticky top-0 left-0 w-full rounded-none p-0"
+            class="sticky top-0 left-0 z-10 w-full rounded-none p-0"
             @click.stop="setVisibility(!isVisible)"
         >
             <slot name="header" />

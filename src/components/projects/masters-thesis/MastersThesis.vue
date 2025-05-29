@@ -2,7 +2,7 @@
     <div class="h-full w-full snap-y snap-mandatory overflow-auto bg-white/90">
         <SnapSection class="flex flex-col">
             <div
-                class="from-highlight to-highlight/80 sticky top-0 left-0 flex w-full flex-col items-center bg-gradient-to-b from-50% py-2"
+                class="from-highlight to-highlight/80 sticky top-0 left-0 z-10 flex w-full flex-col items-center bg-gradient-to-b from-50% py-2"
             >
                 <RespText as="h1" size="xl" class="font-light whitespace-nowrap">
                     {{ MASTERS_THESIS_INFO.title }}

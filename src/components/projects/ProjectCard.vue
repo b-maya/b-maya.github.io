@@ -91,7 +91,6 @@ const ordering = computed<ItemTypes[]>(() =>
 );
 
 const onClick = () => {
-    console.log(`${props.title} clicked`);
     emit('clicked');
 };
 </script>
