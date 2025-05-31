@@ -1,12 +1,12 @@
 <template>
     <GenericButton
-        class="group flex w-full gap-2 rounded-none p-2 hover:bg-violet-400 active:bg-violet-400 sm:gap-4 md:gap-8 lg:gap-8"
+        :class="cn('group flex w-full gap-2 sm:gap-4 md:gap-8 lg:gap-8', styles.button)"
         @click.stop="onClick"
     >
         <RowReorderer :order="ordering">
             <template #numbering>
                 <div>
-                    <RespText size="2xl" class="font-light">
+                    <RespText size="xl" class="font-light">
                         {{ numbering }}
                     </RespText>
                 </div>
@@ -29,7 +29,12 @@
                     <div class="flex w-full flex-wrap items-baseline gap-2">
                         <RespText
                             size="xl"
-                            class="bg-highlight/80 rounded-r-lg py-1 pr-2 text-start font-light sm:whitespace-nowrap"
+                            :class="
+                                cn(
+                                    'rounded-r-lg py-1 pr-2 text-start font-light sm:whitespace-nowrap',
+                                    styles.text,
+                                )
+                            "
                         >
                             {{ title }}
                         </RespText>
@@ -52,6 +57,9 @@ import RowReorderer from '../RowReorderer.vue';
 import RespText from '../RespText.vue';
 import GenericButton from '../inputs/GenericButton.vue';
 
+import { useBreakpoints, breakpointsTailwind } from '@vueuse/core';
+import { cn } from 'clsx-for-tailwind';
+
 type InfoOrder = 'n-i-d' | 'n-d-i'; // numbering-image-description || numbering-description-image
 
 type ItemTypes = 'numbering' | 'image' | 'description';
@@ -64,6 +72,17 @@ type ProjectCardProps = {
     img: string;
     imgAlt: string;
     order?: InfoOrder;
+};
+
+const VARIANTS = {
+    plain: {
+        button: 'p-4 rounded-none',
+        text: 'group-hover:bg-highlight/80 group-active:bg-highlight/80',
+    },
+    tile: {
+        button: 'p-2 rounded-none hover:bg-violet-400 active:bg-violet-400',
+        text: 'bg-highlight/80',
+    },
 };
 
 defineOptions({
@@ -93,4 +112,7 @@ const ordering = computed<ItemTypes[]>(() =>
 const onClick = () => {
     emit('clicked');
 };
+
+const { md } = useBreakpoints(breakpointsTailwind);
+const styles = computed(() => (md.value ? VARIANTS.plain : VARIANTS.tile));
 </script>

@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import { mdiHome, mdiAccount, mdiShape } from '@mdi/js';
+import { mdiHome, mdiAccount, mdiShape, mdiClipboardSearch, mdiBrush } from '@mdi/js';
 import { ref } from 'vue';
 
 import SidebarComp from './SidebarComp.vue';
@@ -27,6 +27,18 @@ const sections = ref([
         label: 'Portfolio',
         icon: mdiShape,
         path: '/portfolio',
+        children: [
+            {
+                label: 'Design Research Projects',
+                icon: mdiClipboardSearch,
+                path: '/portfolio/design-research-projects',
+            },
+            {
+                label: 'Figma-heavy Projects',
+                icon: mdiBrush,
+                path: '/portfolio/figma-projects',
+            },
+        ],
     },
 ]);
 </script>

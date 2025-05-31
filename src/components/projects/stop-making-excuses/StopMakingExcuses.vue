@@ -54,11 +54,6 @@
         </SnapSection>
 
         <SnapSection class="flex flex-col justify-center gap-8 pb-4">
-            <div class="mt-4 w-full grow self-center p-4">
-                <div class="relative h-full w-full">
-                    <PhotoRoll :images="figmaImages" />
-                </div>
-            </div>
             <div class="flex flex-col gap-2">
                 <RespText as="h2" size="lg" class="px-8 font-light whitespace-nowrap">
                     Process
@@ -81,6 +76,27 @@
                 </ol>
             </div>
         </SnapSection>
+        <SnapSection class="flex flex-col justify-center gap-8 pb-4">
+            <div class="mt-4 w-full grow self-center p-4">
+                <div class="relative h-full w-full">
+                    <PhotoRoll :images="[figmaImages[0]]" />
+                </div>
+            </div>
+        </SnapSection>
+        <SnapSection class="flex flex-col justify-center gap-8 pb-4">
+            <div class="mt-4 w-full grow self-center p-4">
+                <div class="relative h-full w-full">
+                    <PhotoRoll :images="[figmaImages[1]]" />
+                </div>
+            </div>
+        </SnapSection>
+        <SnapSection class="flex flex-col justify-center gap-8 pb-4">
+            <div class="mt-4 w-full grow self-center p-4">
+                <div class="relative h-full w-full">
+                    <PhotoRoll :images="[figmaImages[2]]" />
+                </div>
+            </div>
+        </SnapSection>
 
         <SnapSection class="flex flex-col justify-center gap-8">
             <RespText as="h2" size="lg" class="px-8 font-light whitespace-nowrap">
@@ -100,9 +116,7 @@
                     Prototype testing to identify points for improvement
                 </RespText>
                 <RespText as="li" size="base" class="px-8"> User research </RespText>
-                <RespText size="base" class="px-8">
-                    (<strong>Teammates:</strong> A. Pandit, Y. Abbasi, A. Valeva, D. Skorospelova)
-                </RespText>
+                <RespText size="base" class="px-8"> (<i>Worked in a team of 5</i>) </RespText>
             </ul>
         </SnapSection>
         <SnapSection class="flex flex-col justify-center gap-8 pb-4">

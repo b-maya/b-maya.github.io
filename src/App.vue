@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-primary flex h-full w-full overflow-hidden">
+    <div class="flex h-full w-full overflow-hidden bg-violet-50">
         <IntroSidebar />
         <RouterView />
     </div>

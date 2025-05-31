@@ -16,7 +16,7 @@
             </RespText>
             <div class="flex h-full w-full grow flex-col justify-center pb-4">
                 <div class="relative mt-4 w-full grow self-center p-4">
-                    <PhotoRoll :images="images" />
+                    <PhotoRoll :images="image1" />
                 </div>
                 <RespText size="lg" class="my-auto p-8 text-center">
                     {{ SIP_SAVE_INFO.summary }}
@@ -24,6 +24,11 @@
             </div>
         </SnapSection>
 
+        <SnapSection class="flex flex-col justify-center gap-8">
+            <div class="relative mt-4 w-full grow self-center p-4">
+                <PhotoRoll :images="image2" />
+            </div>
+        </SnapSection>
         <SnapSection class="flex flex-col justify-center gap-8">
             <RespText as="h2" size="lg" class="px-8 font-light whitespace-nowrap">
                 Process
@@ -60,9 +65,7 @@
                 </RespText>
                 <RespText as="li" size="base" class="px-8"> User testing </RespText>
                 <RespText as="li" size="base" class="px-8"> Report writing and editing </RespText>
-                <RespText size="base" class="px-8">
-                    (<strong>Teammates:</strong> A. Pandit, D. Akcam, A. Valeva, H. Vassen)
-                </RespText>
+                <RespText size="base" class="px-8"> (<i>Worked in a team of 5</i>) </RespText>
             </ul>
         </SnapSection>
     </div>
@@ -82,12 +85,15 @@ defineOptions({
     name: 'SipSave',
 });
 
-const images = [
+const image1 = [
     {
         src: Photo1,
         alt: 'Prototype for the Cover screen and the Dashboard of the SipSave app,',
         withCaption: true,
     },
+];
+
+const image2 = [
     {
         src: Photo2,
         alt: 'Prototypes of the other pages in the SipSave app, including Money-Tracker, Drink-Selector and Trending-Information.',

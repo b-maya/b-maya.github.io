@@ -9,7 +9,8 @@ import PolicingTrackablePass from './components/projects/policing-trackable-pass
 const routes = [
     { path: '/', component: IntroPage },
     { path: '/about', component: AboutPage },
-    { path: '/portfolio', component: PortfolioPage },
+    { path: '/portfolio/', component: PortfolioPage },
+    { path: '/portfolio/:projectsType', component: PortfolioPage },
     { path: '/portfolio/masters-thesis', component: MastersThesis },
     { path: '/portfolio/policing-trackable-pass', component: PolicingTrackablePass },
     { path: '/portfolio/stop-making-excuses', component: StopMakingExcuses },
