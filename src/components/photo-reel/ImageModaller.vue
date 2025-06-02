@@ -4,7 +4,7 @@
         <div
             v-if="open"
             ref="parentRef"
-            class="z-modal fixed top-0 left-0 h-dvh w-dvw bg-black/80"
+            class="fixed top-0 left-0 z-1000 flex h-dvh w-dvw items-center justify-center bg-black/80"
             v-on:click="open = false"
         >
             <img
@@ -12,7 +12,7 @@
                 :src="src"
                 :alt="alt"
                 :style="[imageDimensionStyle, isRotated ? 'transform: rotate(90deg)' : '']"
-                class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-md object-cover"
+                class="rounded-md"
                 v-on:click.stop="showCaption = !showCaption"
             />
             <Transition>

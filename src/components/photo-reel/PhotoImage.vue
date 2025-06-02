@@ -23,7 +23,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, onUnmounted, ref } from 'vue';
+import { computed, onMounted, onUnmounted, reactive, ref, watchEffect } from 'vue';
 import ImageModaller from './ImageModaller.vue';
 import RespText from '../RespText.vue';
 
@@ -58,39 +58,50 @@ const photoRef = ref<HTMLDivElement>();
 
 const imageRef = ref<HTMLImageElement>();
 
-const aspectRatio = computed(() =>
-    imageRef.value ? imageRef.value.naturalWidth / imageRef.value.naturalHeight : 1,
-);
+const photoDim = reactive<PhotoDim>({ height: 0, width: 0 });
 
-const photoDim = computed(() => {
-    if (!props.parentHeight || !props.parentWidth || !imageRef.value)
-        return { height: 0, width: 0 };
+watchEffect(() => {
+    if (!props.parentHeight || !props.parentWidth || !imageRef.value) {
+        photoDim.height = 0;
+        photoDim.width = 0;
+        return;
+    }
 
-    let width = (props.parentHeight - 20) * aspectRatio.value;
+    const aspectRatio = (imageRef.value.naturalWidth || 1) / (imageRef.value.naturalHeight || 1);
+
+    let width = (props.parentHeight - 20) * aspectRatio;
 
     if (width + props.albumBuffer > props.parentWidth) {
         width = props.parentWidth - props.albumBuffer;
-        return { height: width / aspectRatio.value, width: width };
+
+        photoDim.height = width / aspectRatio;
+        photoDim.width = width;
+        return;
     }
-    return { height: props.parentHeight, width: width };
+    photoDim.height = props.parentHeight;
+    photoDim.width = width;
 });
 
 const photoStyle = computed(() =>
-    !photoDim.value.width && !photoDim.value.height
+    !photoDim.width && !photoDim.height
         ? { height: '100%', width: '100%' }
-        : { height: `${photoDim.value.height}px`, width: `${photoDim.value.width}px` },
+        : { height: `${photoDim.height}px`, width: `${photoDim.width}px` },
 );
 
 const observer = new IntersectionObserver(
     ([entry]) => {
         if (entry.isIntersecting && imageRef.value) {
-            emits('scrolledTo', photoDim.value);
+            emits('scrolledTo', photoDim);
         }
     },
     {
         threshold: 0.5,
     },
 );
+
+defineExpose({
+    photoDim,
+});
 
 onMounted(() => {
     if (photoRef.value) {
