@@ -1,9 +1,7 @@
 <template>
     <SnapSection class="flex max-h-full flex-col gap-4 overflow-hidden p-8">
         <RespText size="lg" class="font-light"> Artefact 1: </RespText>
-        <div class="relative w-full grow self-center p-4">
-            <PhotoRoll :images="images" />
-        </div>
+        <PhotoRoll :images="images" />
         <RespText size="base" class="shrink">
             We imagined a country where the government controls their citizens’ worldview;
             manipulates their visual and auditory stimuli; tries to cull their individuality; and

@@ -15,9 +15,7 @@
                 {{ SIP_SAVE_INFO.date }}
             </RespText>
             <div class="flex h-full w-full grow flex-col justify-center pb-4">
-                <div class="relative mt-4 w-full grow self-center p-4">
-                    <PhotoRoll :images="image1" />
-                </div>
+                <PhotoRoll class="mt-4" :images="image1" />
                 <RespText size="lg" class="my-auto p-8 text-center">
                     {{ SIP_SAVE_INFO.summary }}
                 </RespText>
@@ -25,9 +23,7 @@
         </SnapSection>
 
         <SnapSection class="flex flex-col justify-center gap-8">
-            <div class="relative mt-4 w-full grow self-center p-4">
-                <PhotoRoll :images="image2" />
-            </div>
+            <PhotoRoll class="mt-4" :images="image2" />
         </SnapSection>
         <SnapSection class="flex flex-col justify-center gap-8">
             <RespText as="h2" size="lg" class="px-8 font-light whitespace-nowrap">
@@ -49,7 +45,7 @@
                     Operationalisation – Created a roadmap for app release and iterations
                 </RespText>
                 <RespText as="li" size="base" class="px-8">
-                    Evaluation – Drew up a plan to analysis impact and uptake
+                    Evaluation – Drew up a plan to analyse impact and uptake
                 </RespText>
             </ol>
         </SnapSection>

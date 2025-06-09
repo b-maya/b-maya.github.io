@@ -9,9 +9,7 @@
             able to keep an eye on travellers’ actions without deploying police. Some examples are
             given below.
         </RespText>
-        <div class="relative w-full grow self-center p-4">
-            <PhotoRoll :images="images" />
-        </div>
+        <PhotoRoll :images="images" />
     </SnapSection>
 </template>
 

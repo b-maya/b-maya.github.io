@@ -60,7 +60,7 @@ const imageRef = ref<HTMLImageElement>();
 
 const photoDim = reactive<PhotoDim>({ height: 0, width: 0 });
 
-watchEffect(() => {
+const calculateDim = () => {
     if (!props.parentHeight || !props.parentWidth || !imageRef.value) {
         photoDim.height = 0;
         photoDim.width = 0;
@@ -80,6 +80,10 @@ watchEffect(() => {
     }
     photoDim.height = props.parentHeight;
     photoDim.width = width;
+};
+
+watchEffect(() => {
+    calculateDim();
 });
 
 const photoStyle = computed(() =>
@@ -99,8 +103,13 @@ const observer = new IntersectionObserver(
     },
 );
 
+const getPhotoDim = () => {
+    calculateDim();
+    return photoDim;
+};
+
 defineExpose({
-    photoDim,
+    getPhotoDim,
 });
 
 onMounted(() => {

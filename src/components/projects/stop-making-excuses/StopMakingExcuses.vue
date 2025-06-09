@@ -15,9 +15,7 @@
                 {{ STOP_MAKING_EXCUSES_INFO.date }}
             </RespText>
             <div class="flex h-full w-full grow flex-col justify-center">
-                <div class="relative mt-4 w-full grow self-center p-4">
-                    <PhotoRoll :images="coverImage" />
-                </div>
+                <PhotoRoll class="mt-4" :images="coverImage" />
                 <RespText size="lg" class="my-auto p-8 text-center">
                     {{ STOP_MAKING_EXCUSES_INFO.summary }}
                 </RespText>
@@ -61,11 +59,10 @@
                 <ol class="flex list-inside list-decimal flex-col gap-4 px-8">
                     <RespText as="li" size="base" class="px-8">
                         Contextual Inquiry – Conducted semi-structured interviews to understand ADHD
-                        Design
                     </RespText>
                     <RespText as="li" size="base" class="px-8">
-                        Thinking – Created a wireframe on Figma to determine the branching structure
-                        and outcomes
+                        Design Thinking – Created a wireframe on Figma to determine the branching
+                        structure and outcomes
                     </RespText>
                     <RespText as="li" size="base" class="px-8">
                         Design Process – Created the prototype on Figma
@@ -77,25 +74,13 @@
             </div>
         </SnapSection>
         <SnapSection class="flex flex-col justify-center gap-8 pb-4">
-            <div class="mt-4 w-full grow self-center p-4">
-                <div class="relative h-full w-full">
-                    <PhotoRoll :images="[figmaImages[0]]" />
-                </div>
-            </div>
+            <PhotoRoll class="mt-4" :images="[figmaImages[0]]" />
         </SnapSection>
         <SnapSection class="flex flex-col justify-center gap-8 pb-4">
-            <div class="mt-4 w-full grow self-center p-4">
-                <div class="relative h-full w-full">
-                    <PhotoRoll :images="[figmaImages[1]]" />
-                </div>
-            </div>
+            <PhotoRoll class="mt-4" :images="[figmaImages[1]]" />
         </SnapSection>
         <SnapSection class="flex flex-col justify-center gap-8 pb-4">
-            <div class="mt-4 w-full grow self-center p-4">
-                <div class="relative h-full w-full">
-                    <PhotoRoll :images="[figmaImages[2]]" />
-                </div>
-            </div>
+            <PhotoRoll class="mt-4" :images="[figmaImages[2]]" />
         </SnapSection>
 
         <SnapSection class="flex flex-col justify-center gap-8">
@@ -120,11 +105,7 @@
             </ul>
         </SnapSection>
         <SnapSection class="flex flex-col justify-center gap-8 pb-4">
-            <div class="mt-4 w-full grow self-center p-4">
-                <div class="relative h-full w-full">
-                    <PhotoRoll :images="finalWireframe" />
-                </div>
-            </div>
+            <PhotoRoll class="mt-4" :images="finalWireframe" />
 
             <RespText as="h2" size="lg" class="px-8 font-light whitespace-nowrap">
                 Results

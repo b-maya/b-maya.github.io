@@ -1,14 +1,15 @@
 <template>
     <SnapSection class="flex max-h-full flex-col gap-4 overflow-hidden p-8">
         <RespText size="lg" class="font-light"> Research Probe 2: </RespText>
-        <div class="relative w-full grow self-center p-4">
-            <PhotoRoll :images="images" />
-        </div>
+        <PhotoRoll :images="image1" />
         <RespText size="base" class="shrink">
             Participants were shown the <strong>real PCOS timeline</strong> as well as a
             <strong>counterfactual scenarios timeline</strong>, with an aim to spark discussions
             about the state of PCOS research, literacy, and awareness.
         </RespText>
+    </SnapSection>
+    <SnapSection class="flex max-h-full flex-col gap-4 overflow-hidden p-8">
+        <PhotoRoll :images="image2" />
     </SnapSection>
 </template>
 
@@ -24,11 +25,13 @@ defineOptions({
     name: 'ResearchProbe2',
 });
 
-const images = [
+const image1 = [
     {
         src: RealTimeline,
         alt: 'Real PCOS Timeline',
     },
+];
+const image2 = [
     {
         src: CounterfactualTimeline,
         alt: 'Counterfactual PCOS timeline',

@@ -1,27 +1,29 @@
 <template>
-    <div
-        ref="parentRef"
-        class="absolute top-0 left-0 flex h-full max-h-full w-full max-w-full items-center justify-center"
-    >
+    <div class="relative w-full grow self-center">
         <div
-            class="flex h-full rounded-lg outline-4 outline-white transition-all duration-500 dark:bg-gray-950/50"
-            :style="{ width: albumDim.width }"
+            ref="parentRef"
+            class="absolute top-0 left-0 flex h-full max-h-full w-full max-w-full items-center justify-center p-4"
         >
             <div
-                ref="albumRef"
-                class="flex h-full w-full snap-x snap-mandatory items-center gap-5 overflow-x-auto overflow-y-hidden"
-                :class="{ 'justify-center': images.length === 1 }"
+                class="flex h-full rounded-lg outline-4 outline-white transition-all duration-500 dark:bg-gray-950/50"
+                :style="{ width: albumDim.width }"
             >
-                <PhotoImage
-                    v-for="(image, index) in images"
-                    ref="photosRef"
-                    :key="`photo-roll-image-${image}`"
-                    :image="image"
-                    :parent-height="parentHeight - 10"
-                    :parent-width="parentWidth"
-                    :album-buffer="ALBUM_BUFFER_WIDTH"
-                    @scrolled-to="(...args) => setAlbumDim(index, ...args)"
-                />
+                <div
+                    ref="albumRef"
+                    class="flex h-full w-full snap-x snap-mandatory items-center gap-5 overflow-x-auto overflow-y-hidden"
+                    :class="{ 'justify-center': images.length === 1 }"
+                >
+                    <PhotoImage
+                        v-for="(image, index) in images"
+                        ref="photosRef"
+                        :key="`photo-roll-image-${image}`"
+                        :image="image"
+                        :parent-height="parentHeight - 10"
+                        :parent-width="parentWidth"
+                        :album-buffer="ALBUM_BUFFER_WIDTH"
+                        @scrolled-to="(...args) => setAlbumDim(index, ...args)"
+                    />
+                </div>
             </div>
         </div>
     </div>
@@ -64,7 +66,7 @@ watch(
     () => isAlbumVisible.value,
     (isVisible) => {
         if (!isVisible) return;
-        const photoDim = photosRef.value?.[currentPhotoIndex.value]?.photoDim;
+        const photoDim = photosRef.value?.[currentPhotoIndex.value]?.getPhotoDim();
         if (!photoDim) return;
         setAlbumDim(currentPhotoIndex.value, photoDim);
     },
