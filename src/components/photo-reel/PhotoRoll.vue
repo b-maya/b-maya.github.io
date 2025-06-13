@@ -21,6 +21,7 @@
                         :parent-height="parentHeight - 10"
                         :parent-width="parentWidth"
                         :album-buffer="ALBUM_BUFFER_WIDTH"
+                        class="first:ml-10 last:mr-10"
                         @scrolled-to="(...args) => setAlbumDim(index, ...args)"
                     />
                 </div>

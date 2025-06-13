@@ -12,14 +12,14 @@
                 />
             </template>
         </ImageModaller>
-        <RespText
-            v-if="image.withCaption"
-            size="xs"
-            class="bg-primary/80 pointer-events-none absolute bottom-0 left-1/2 w-full -translate-x-1/2 rounded-t-lg py-1 text-center leading-5 text-black"
-        >
-            {{ image.alt }}
-        </RespText>
     </div>
+    <RespText
+        v-if="image.withCaption"
+        size="xs"
+        class="bg-primary/80 pointer-events-none absolute bottom-0 left-1/2 mx-auto -translate-x-1/2 rounded-t-lg py-1 text-center leading-5 text-black"
+    >
+        {{ image.alt }}
+    </RespText>
 </template>
 
 <script setup lang="ts">

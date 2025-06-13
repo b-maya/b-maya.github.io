@@ -10,7 +10,7 @@
             class="flex h-full grow flex-col items-center justify-center p-4 sm:z-1 sm:justify-start sm:overflow-y-auto lg:justify-center"
         >
             <div
-                class="bg-primary/75 z-1 flex flex-col items-start justify-center gap-8 rounded-lg p-4 md:bg-transparent"
+                class="bg-primary/75 z-1 flex flex-col items-start justify-center gap-8 rounded-lg p-4 md:bg-transparent xl:gap-16"
             >
                 <RespText as="p" size="base">
                     I am an interdisciplinary content and design professional with expertise in

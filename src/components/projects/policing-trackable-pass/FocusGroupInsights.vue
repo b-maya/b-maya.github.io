@@ -1,5 +1,7 @@
 <template>
-    <SnapSection class="flex max-h-full flex-col justify-evenly gap-8 overflow-hidden p-8">
+    <SnapSection
+        class="flex max-h-full flex-col justify-evenly gap-8 overflow-hidden p-8 xl:gap-16"
+    >
         <div class="flex flex-col gap-4">
             <RespText size="lg" class="font-light"> Focus Group Insights: </RespText>
             <RespText size="base" class="font-light"> Participants asked: </RespText>

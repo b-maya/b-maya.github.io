@@ -22,7 +22,7 @@
             </div>
         </SnapSection>
 
-        <SnapSection class="flex flex-col justify-center gap-8">
+        <SnapSection class="flex flex-col justify-center gap-8 xl:gap-16">
             <RespText as="h2" size="lg" class="px-8 font-light whitespace-nowrap">
                 Concept
             </RespText>
@@ -51,7 +51,7 @@
             </RespText>
         </SnapSection>
 
-        <SnapSection class="flex flex-col justify-center gap-8 pb-4">
+        <SnapSection class="flex flex-col justify-center gap-8 pb-4 xl:gap-16">
             <div class="flex flex-col gap-2">
                 <RespText as="h2" size="lg" class="px-8 font-light whitespace-nowrap">
                     Process
@@ -73,17 +73,17 @@
                 </ol>
             </div>
         </SnapSection>
-        <SnapSection class="flex flex-col justify-center gap-8 pb-4">
+        <SnapSection class="flex flex-col justify-center gap-8 pb-4 xl:gap-16">
             <PhotoRoll class="mt-4" :images="[figmaImages[0]]" />
         </SnapSection>
-        <SnapSection class="flex flex-col justify-center gap-8 pb-4">
+        <SnapSection class="flex flex-col justify-center gap-8 pb-4 xl:gap-16">
             <PhotoRoll class="mt-4" :images="[figmaImages[1]]" />
         </SnapSection>
-        <SnapSection class="flex flex-col justify-center gap-8 pb-4">
+        <SnapSection class="flex flex-col justify-center gap-8 pb-4 xl:gap-16">
             <PhotoRoll class="mt-4" :images="[figmaImages[2]]" />
         </SnapSection>
 
-        <SnapSection class="flex flex-col justify-center gap-8">
+        <SnapSection class="flex flex-col justify-center gap-8 xl:gap-16">
             <RespText as="h2" size="lg" class="px-8 font-light whitespace-nowrap">
                 My Role
             </RespText>
@@ -104,22 +104,23 @@
                 <RespText size="base" class="px-8"> (<i>Worked in a team of 5</i>) </RespText>
             </ul>
         </SnapSection>
-        <SnapSection class="flex flex-col justify-center gap-8 pb-4">
+        <SnapSection class="flex flex-col justify-center gap-8 pb-4 xl:gap-16">
             <PhotoRoll class="mt-4" :images="finalWireframe" />
-
-            <RespText as="h2" size="lg" class="px-8 font-light whitespace-nowrap">
-                Results
-            </RespText>
-            <ol class="flex list-inside list-decimal flex-col gap-4 px-8">
-                <RespText as="li" size="base" class="px-8">
-                    Many participants said they plan to get assessed for ADHD after playing the
-                    game.
+            <div class="flex flex-col gap-4">
+                <RespText as="h2" size="lg" class="px-8 font-light whitespace-nowrap">
+                    Results
                 </RespText>
-                <RespText as="li" size="base" class="px-8">
-                    Three participants with ADHD said they could relate to many parts of the
-                    narrative.
-                </RespText>
-            </ol>
+                <ol class="flex list-inside list-decimal flex-col gap-4 px-8">
+                    <RespText as="li" size="base" class="px-8">
+                        Many participants said they plan to get assessed for ADHD after playing the
+                        game.
+                    </RespText>
+                    <RespText as="li" size="base" class="px-8">
+                        Three participants with ADHD said they could relate to many parts of the
+                        narrative.
+                    </RespText>
+                </ol>
+            </div>
         </SnapSection>
     </div>
 </template>

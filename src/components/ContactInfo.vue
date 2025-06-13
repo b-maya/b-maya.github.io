@@ -1,7 +1,7 @@
 <template>
     <div
         class="flex items-center justify-center"
-        :class="[vertical ? 'flex-col gap-2' : 'w-full gap-8']"
+        :class="[vertical ? 'flex-col gap-2' : 'w-full gap-8 xl:gap-16']"
     >
         <a
             href="mailto:maya.b.researcher@gmail.com"

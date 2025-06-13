@@ -22,10 +22,10 @@
             </div>
         </SnapSection>
 
-        <SnapSection class="flex flex-col justify-center gap-8">
+        <SnapSection class="flex flex-col justify-center gap-8 xl:gap-16">
             <PhotoRoll class="mt-4" :images="image2" />
         </SnapSection>
-        <SnapSection class="flex flex-col justify-center gap-8">
+        <SnapSection class="flex flex-col justify-center gap-8 xl:gap-16">
             <RespText as="h2" size="lg" class="px-8 font-light whitespace-nowrap">
                 Process
             </RespText>
@@ -50,7 +50,7 @@
             </ol>
         </SnapSection>
 
-        <SnapSection class="flex flex-col justify-center gap-8">
+        <SnapSection class="flex flex-col justify-center gap-8 xl:gap-16">
             <RespText as="h2" size="lg" class="px-8 font-light whitespace-nowrap">
                 My Role
             </RespText>

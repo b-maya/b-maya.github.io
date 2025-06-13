@@ -21,6 +21,8 @@ import MastersThesisCard from '../projects/masters-thesis/MastersThesisCard.vue'
 import PolicingTrackablePassCard from '../projects/policing-trackable-pass/PolicingTrackablePassCard.vue';
 import StopMakingExcusesCard from '../projects/stop-making-excuses/StopMakingExcusesCard.vue';
 import SipSaveCard from '../projects/sip-save/SipSaveCard.vue';
+import FuturesWheelCard from '../projects/futures-wheel/FuturesWheelCard.vue';
+import ZeroHungerCard from '../projects/zero-hunger/ZeroHungerCard.vue';
 import { useRoute } from 'vue-router';
 import { computed, markRaw, nextTick, ref, watch, type ComponentPublicInstance } from 'vue';
 
@@ -37,60 +39,52 @@ const route = useRoute();
 
 const prioritizeFigmaProjects = computed(() => route.params.projectsType === PROJECT_TYPES.figma);
 
+const design_projects = [
+    {
+        name: 'MastersThesisCard',
+        component: markRaw(MastersThesisCard),
+        type: PROJECT_TYPES.design,
+        ref: ref<ComponentPublicInstance[]>(),
+    },
+    {
+        name: 'PolicingTrackablePassCard',
+        component: markRaw(PolicingTrackablePassCard),
+        type: PROJECT_TYPES.design,
+        ref: ref<ComponentPublicInstance[]>(),
+    },
+    {
+        name: 'FuturesWheelCard',
+        component: markRaw(FuturesWheelCard),
+        type: PROJECT_TYPES.design,
+        ref: ref<ComponentPublicInstance[]>(),
+    },
+    {
+        name: 'ZeroHungerCard',
+        component: markRaw(ZeroHungerCard),
+        type: PROJECT_TYPES.design,
+        ref: ref<ComponentPublicInstance[]>(),
+    },
+];
+
+const figma_projects = [
+    {
+        name: 'StopMakingExcusesCard',
+        component: markRaw(StopMakingExcusesCard),
+        type: PROJECT_TYPES.figma,
+        ref: ref<ComponentPublicInstance[]>(),
+    },
+    {
+        name: 'SipSaveCard',
+        component: markRaw(SipSaveCard),
+        type: PROJECT_TYPES.figma,
+        ref: ref<ComponentPublicInstance[]>(),
+    },
+];
+
 const projects = computed(() =>
     prioritizeFigmaProjects.value
-        ? [
-              {
-                  name: 'StopMakingExcusesCard',
-                  component: markRaw(StopMakingExcusesCard),
-                  type: PROJECT_TYPES.figma,
-                  ref: ref<ComponentPublicInstance[]>(),
-              },
-              {
-                  name: 'SipSaveCard',
-                  component: markRaw(SipSaveCard),
-                  type: PROJECT_TYPES.figma,
-                  ref: ref<ComponentPublicInstance[]>(),
-              },
-              {
-                  name: 'MastersThesisCard',
-                  component: markRaw(MastersThesisCard),
-                  type: PROJECT_TYPES.design,
-                  ref: ref<ComponentPublicInstance[]>(),
-              },
-              {
-                  name: 'PolicingTrackablePassCard',
-                  component: markRaw(PolicingTrackablePassCard),
-                  type: PROJECT_TYPES.design,
-                  ref: ref<ComponentPublicInstance[]>(),
-              },
-          ]
-        : [
-              {
-                  name: 'MastersThesisCard',
-                  component: markRaw(MastersThesisCard),
-                  type: PROJECT_TYPES.design,
-                  ref: ref<ComponentPublicInstance[]>(),
-              },
-              {
-                  name: 'PolicingTrackablePassCard',
-                  component: markRaw(PolicingTrackablePassCard),
-                  type: PROJECT_TYPES.design,
-                  ref: ref<ComponentPublicInstance[]>(),
-              },
-              {
-                  name: 'StopMakingExcusesCard',
-                  component: markRaw(StopMakingExcusesCard),
-                  type: PROJECT_TYPES.figma,
-                  ref: ref<ComponentPublicInstance[]>(),
-              },
-              {
-                  name: 'SipSaveCard',
-                  component: markRaw(SipSaveCard),
-                  type: PROJECT_TYPES.figma,
-                  ref: ref<ComponentPublicInstance[]>(),
-              },
-          ],
+        ? [...figma_projects, ...design_projects]
+        : [...design_projects, ...figma_projects],
 );
 
 watch(

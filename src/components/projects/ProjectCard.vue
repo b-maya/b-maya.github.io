@@ -1,6 +1,6 @@
 <template>
     <GenericButton
-        :class="cn('group flex w-full gap-2 sm:gap-4 md:gap-8 lg:gap-8', styles.button)"
+        :class="cn('group relative flex w-full gap-2 sm:gap-4 md:gap-8 lg:gap-8', styles.button)"
         @click.stop="onClick"
     >
         <RowReorderer :order="ordering">
@@ -29,12 +29,7 @@
                     <div class="flex w-full flex-wrap items-baseline gap-2">
                         <RespText
                             size="xl"
-                            :class="
-                                cn(
-                                    'rounded-r-lg py-1 pr-2 text-start font-light sm:whitespace-nowrap',
-                                    styles.text,
-                                )
-                            "
+                            :class="cn('rounded-r-lg py-1 pr-2 text-start font-light', styles.text)"
                         >
                             {{ title }}
                         </RespText>
@@ -48,6 +43,10 @@
                 </div>
             </template>
         </RowReorderer>
+        <div
+            class="absolute bottom-0 left-4 h-1 w-8 bg-violet-950/15 transition-all duration-500 group-hover:w-1/2 group-active:w-1/2"
+            transition-all
+        />
     </GenericButton>
 </template>
 
@@ -77,7 +76,7 @@ type ProjectCardProps = {
 const VARIANTS = {
     plain: {
         button: 'p-4 rounded-none',
-        text: 'group-hover:bg-highlight/80 group-active:bg-highlight/80',
+        text: 'pl-0.5 group-hover:bg-highlight/80 group-active:bg-highlight/80 group-hover:pl-3 group-active:pl-3',
     },
     tile: {
         button: 'p-2 rounded-none hover:bg-violet-400 active:bg-violet-400',
