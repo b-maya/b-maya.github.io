@@ -1,6 +1,6 @@
 <template>
     <SnapSection class="flex flex-col gap-4 p-4 sm:p-6 md:p-8" @scrolledTo="showFlows = true">
-        <RespText size="lg" class="font-light"> Methodology: </RespText>
+        <RespText size="sm" class="font-bold"> Methodology: </RespText>
         <div
             ref="flowParentRef"
             class="flex grow flex-wrap items-stretch justify-center gap-8 sm:gap-4 md:gap-6 lg:gap-8"
@@ -10,7 +10,7 @@
                     <div
                         class="relative max-w-full content-center rounded-lg border-1 border-solid border-violet-600 p-3 text-center transition sm:max-w-44"
                     >
-                        <RespText size="base" class="my-auto font-light">
+                        <RespText size="sm" class="my-auto font-light">
                             <template
                                 v-for="(text, k) in textBox.texts"
                                 :key="`text-${index}-${k}`"

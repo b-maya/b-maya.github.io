@@ -16,29 +16,29 @@
             </RespText>
             <div class="flex h-full w-full grow flex-col justify-center">
                 <PhotoRoll class="mt-4" :images="coverImage" />
-                <RespText size="lg" class="my-auto p-8 text-center">
+                <RespText size="sm" class="my-auto p-8 text-center">
                     {{ STOP_MAKING_EXCUSES_INFO.summary }}
                 </RespText>
             </div>
         </SnapSection>
 
         <SnapSection class="flex flex-col justify-center gap-8 xl:gap-16">
-            <RespText as="h2" size="lg" class="px-8 font-light whitespace-nowrap">
-                Concept
+            <RespText as="h2" size="sm" class="px-8 font-bold whitespace-nowrap">
+                Concept:
             </RespText>
-            <RespText size="base" class="px-8">
+            <RespText size="sm" class="px-8">
                 Twenty-two-year-old Maria struggles with managing her time efficiently, gets
                 distracted easily, often loses focus, and tends to procrastinate. Her parents think
                 she’s lazy and unmotivated. However, these are symptoms of her undiagnosed Attention
                 Deficit Hyperactivity Disorder (ADHD).
             </RespText>
-            <RespText size="base" class="px-8">
+            <RespText size="sm" class="px-8">
                 In this interactive digital narrative, you play as Maria — a regular girl trying to
                 figure out life as she tries to prove her worth to parents who mistake her
                 neurodivergence for laziness. Follow Maria's journey as she receives her diagnosis,
                 and learns to understand and cope with her ADHD.
             </RespText>
-            <RespText size="base" class="px-8">
+            <RespText size="sm" class="px-8">
                 How will you guide her through young adulthood? Can you help her improve
                 relationships, develop coping strategies, and find her path?
                 <a
@@ -53,24 +53,50 @@
 
         <SnapSection class="flex flex-col justify-center gap-8 pb-4 xl:gap-16">
             <div class="flex flex-col gap-2">
-                <RespText as="h2" size="lg" class="px-8 font-light whitespace-nowrap">
-                    Process
-                </RespText>
-                <ol class="flex list-inside list-decimal flex-col gap-4 px-8">
-                    <RespText as="li" size="base" class="px-8">
-                        Contextual Inquiry – Conducted semi-structured interviews to understand ADHD
-                    </RespText>
-                    <RespText as="li" size="base" class="px-8">
-                        Design Thinking – Created a wireframe on Figma to determine the branching
-                        structure and outcomes
-                    </RespText>
-                    <RespText as="li" size="base" class="px-8">
-                        Design Process – Created the prototype on Figma
-                    </RespText>
-                    <RespText as="li" size="base" class="px-8">
-                        Testing & User Research – Collected insights from participants
-                    </RespText>
-                </ol>
+                <div class="flex gap-4 px-8 lg:gap-8">
+                    <div class="w-full">
+                        <RespText as="h3" size="sm" class="inline font-bold">
+                            Process Followed:
+                        </RespText>
+
+                        <ol class="flex list-inside list-decimal flex-col gap-4 px-8">
+                            <RespText as="li" size="sm">
+                                Contextual Inquiry – Conducted semi-structured interviews to
+                                understand ADHD
+                            </RespText>
+                            <RespText as="li" size="sm">
+                                Design Thinking – Created a wireframe on Figma to determine the
+                                branching structure and outcomes
+                            </RespText>
+                            <RespText as="li" size="sm">
+                                Design Process – Created the prototype on Figma
+                            </RespText>
+                            <RespText as="li" size="sm">
+                                Testing & User Research – Collected insights from participants
+                            </RespText>
+                        </ol>
+                    </div>
+                    <div class="flex w-full flex-col gap-2">
+                        <RespText as="h3" size="sm" class="font-bold"> My Role: </RespText>
+
+                        <ul class="flex list-inside list-disc flex-col gap-4 px-8">
+                            <RespText as="li" size="sm">
+                                Designing semi-structured interviews
+                            </RespText>
+                            <RespText as="li" size="sm">
+                                UX Writing (Crafting text for buttons/choices and Dialogue writing)
+                            </RespText>
+                            <RespText as="li" size="sm">
+                                Narrative development from ideas to dialogues
+                            </RespText>
+                            <RespText as="li" size="sm">
+                                Prototype testing to identify points for improvement
+                            </RespText>
+                            <RespText as="li" size="sm"> User research </RespText>
+                            <RespText size="sm"> (<i>Worked in a team of 5</i>) </RespText>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </SnapSection>
         <SnapSection class="flex flex-col justify-center gap-8 pb-4 xl:gap-16">
@@ -83,39 +109,18 @@
             <PhotoRoll class="mt-4" :images="[figmaImages[2]]" />
         </SnapSection>
 
-        <SnapSection class="flex flex-col justify-center gap-8 xl:gap-16">
-            <RespText as="h2" size="lg" class="px-8 font-light whitespace-nowrap">
-                My Role
-            </RespText>
-            <ul class="flex list-inside list-disc flex-col gap-4 px-8">
-                <RespText as="li" size="base" class="px-8">
-                    Designing semi-structured interviews
-                </RespText>
-                <RespText as="li" size="base" class="px-8">
-                    UX Writing (Crafting text for buttons/choices and Dialogue writing)
-                </RespText>
-                <RespText as="li" size="base" class="px-8">
-                    Narrative development from ideas to dialogues
-                </RespText>
-                <RespText as="li" size="base" class="px-8">
-                    Prototype testing to identify points for improvement
-                </RespText>
-                <RespText as="li" size="base" class="px-8"> User research </RespText>
-                <RespText size="base" class="px-8"> (<i>Worked in a team of 5</i>) </RespText>
-            </ul>
-        </SnapSection>
         <SnapSection class="flex flex-col justify-center gap-8 pb-4 xl:gap-16">
             <PhotoRoll class="mt-4" :images="finalWireframe" />
             <div class="flex flex-col gap-4">
-                <RespText as="h2" size="lg" class="px-8 font-light whitespace-nowrap">
-                    Results
+                <RespText as="h2" size="sm" class="px-8 font-bold whitespace-nowrap">
+                    Results:
                 </RespText>
                 <ol class="flex list-inside list-decimal flex-col gap-4 px-8">
-                    <RespText as="li" size="base" class="px-8">
+                    <RespText as="li" size="sm" class="px-8">
                         Many participants said they plan to get assessed for ADHD after playing the
                         game.
                     </RespText>
-                    <RespText as="li" size="base" class="px-8">
+                    <RespText as="li" size="sm" class="px-8">
                         Three participants with ADHD said they could relate to many parts of the
                         narrative.
                     </RespText>

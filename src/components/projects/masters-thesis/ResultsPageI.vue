@@ -3,7 +3,7 @@
         class="flex max-h-full flex-col justify-center gap-4 p-8"
         @scrolled-to="show = true"
     >
-        <RespText size="lg" class="font-light"> Results: </RespText>
+        <RespText size="sm" class="font-bold"> Results: </RespText>
         <div class="w-full self-center overflow-hidden">
             <ImageModaller :src="FocusGroup1" alt="A photo of the Focus Group in action.">
                 <template #default="{ showModal }">
@@ -17,9 +17,9 @@
             </ImageModaller>
         </div>
 
-        <ol class="flex list-decimal flex-col gap-4 pr-8 pl-12">
+        <ol class="flex list-inside list-decimal flex-col gap-4 pr-8">
             <EnterTransition transition-classes="delay-300" :show="show">
-                <RespText as="li" size="base">
+                <RespText as="li" size="sm">
                     The focus group prompted discussions about PCOS symptoms, other
                     lesser-researched conditions like endometriosis, dismissal of menstrual health-
                     related symptoms by doctors, impact on mental health, and trailing research of
@@ -28,7 +28,7 @@
                 </RespText>
             </EnterTransition>
             <EnterTransition transition-classes="delay-600" :show="show">
-                <RespText as="li" size="base">
+                <RespText as="li" size="sm">
                     Participants highlighted the need to challenge beauty standards as everyday
                     cosmetic issues faced by women can be closely related to menstrual health
                     disorders.

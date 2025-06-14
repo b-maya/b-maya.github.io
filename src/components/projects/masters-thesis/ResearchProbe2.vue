@@ -1,8 +1,8 @@
 <template>
     <SnapSection class="flex max-h-full flex-col gap-4 overflow-hidden p-8">
-        <RespText size="lg" class="font-light"> Research Probe 2: </RespText>
+        <RespText size="sm" class="font-bold"> Research Probe 2: </RespText>
         <PhotoRoll :images="image1" />
-        <RespText size="base" class="shrink">
+        <RespText size="sm" class="shrink">
             Participants were shown the <strong>real PCOS timeline</strong> as well as a
             <strong>counterfactual scenarios timeline</strong>, with an aim to spark discussions
             about the state of PCOS research, literacy, and awareness.

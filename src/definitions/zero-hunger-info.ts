@@ -1,4 +1,4 @@
-import CoverPage from '@/assets/images/projects/zero-hunger/food-drive.png';
+import CoverPage from '@/assets/images/projects/zero-hunger/lo-fi-greenhouse.png';
 
 const ZERO_HUNGER_INFO = {
     title: `A Rapid Prototyping course exercise focussed on UN SDG Zero Hunger`,

@@ -1,6 +1,6 @@
 <template>
     <SnapSection class="flex max-h-full flex-col justify-center gap-4 p-8">
-        <RespText size="lg" class="font-light"> Research Probe 3: </RespText>
+        <RespText size="sm" class="font-bold"> Research Probe 3: </RespText>
         <div class="w-full self-center overflow-hidden">
             <ImageModaller
                 :src="FuturesWheel"
@@ -16,7 +16,7 @@
                 </template>
             </ImageModaller>
         </div>
-        <RespText size="base">
+        <RespText size="sm">
             The <strong>counterfactual scenarios wheel</strong> depicts the possible consequences of
             PCOS being introduced to school text books in 2000, which is part of the counterfactual
             timeline. E.g.: with PCOS being taught in schools, infertility is accepted as a common

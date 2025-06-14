@@ -17,8 +17,8 @@
             <RespText size="xs" class="px-8 pt-4 text-center">
                 {{ ZERO_HUNGER_INFO.title_sub }}
             </RespText>
-            <div class="flex h-full w-full grow flex-col justify-center gap-8 xl:gap-16">
-                <p class="w-full px-8">
+            <div class="flex h-full w-full grow flex-col justify-center gap-8 px-8 py-4">
+                <p class="w-full">
                     <RespText as="h2" size="sm" class="inline font-bold">
                         Research Question:
                     </RespText>
@@ -27,44 +27,40 @@
                         order for students to have sufficient access to food?
                     </RespText>
                 </p>
-                <div class="flex flex-col gap-4 px-8">
-                    <RespText as="h2" size="base" class="font-bold">
-                        Part 1 – Individual Assignment
-                    </RespText>
-                    <div class="flex gap-4 px-8 lg:gap-8">
-                        <p class="w-full">
-                            <RespText as="h3" size="sm" class="inline font-bold">
-                                Process Followed:
-                            </RespText>
-                            <RespText as="span" size="sm">
-                                The assignment was to individually brainstorm solutions that can
-                                solve the aforementioned research question. Scroll below to see the
-                                prototypes I built using objects found at home, along with a short
-                                rationale behind them.
-                            </RespText>
-                        </p>
-                        <div class="flex w-full flex-col gap-2">
-                            <RespText as="h3" size="sm" class="font-bold"> My Role: </RespText>
-                            <ul class="flex list-inside list-disc flex-col gap-4 pl-4">
-                                <RespText as="li" size="sm">
-                                    Independently created three prototypes, with community-building
-                                    and job-creation approaches
-                                </RespText>
-                                <RespText as="li" size="sm">
-                                    Used found objects to build the solutions
-                                </RespText>
-                            </ul>
-                        </div>
-                    </div>
-                    <p class="w-full text-center">
+                <RespText as="h2" size="base" class="font-bold">
+                    Part 1 – Individual Assignment
+                </RespText>
+                <div class="flex gap-4 px-8 lg:gap-8">
+                    <p class="w-full">
                         <RespText as="h3" size="sm" class="inline font-bold">
-                            Materials and Tools Used:
+                            Process Followed:
                         </RespText>
                         <RespText as="span" size="sm">
-                            Indoor found objects, Figma, Canva
+                            The assignment was to individually brainstorm solutions that can solve
+                            the aforementioned research question. Scroll below to see the prototypes
+                            I built using objects found at home, along with a short rationale behind
+                            them.
                         </RespText>
                     </p>
+                    <div class="flex w-full flex-col gap-2">
+                        <RespText as="h3" size="sm" class="font-bold"> My Role: </RespText>
+                        <ul class="flex list-inside list-disc flex-col gap-4 pl-4">
+                            <RespText as="li" size="sm">
+                                Independently created three prototypes, with community-building and
+                                job-creation approaches
+                            </RespText>
+                            <RespText as="li" size="sm">
+                                Used found objects to build the solutions
+                            </RespText>
+                        </ul>
+                    </div>
                 </div>
+                <p class="w-full text-center">
+                    <RespText as="h3" size="sm" class="inline font-bold">
+                        Materials and Tools Used:
+                    </RespText>
+                    <RespText as="span" size="sm"> Indoor found objects, Figma, Canva </RespText>
+                </p>
                 <!-- <PhotoRoll class="mt-4" :images="coverImage" /> -->
             </div>
         </SnapSection>
@@ -131,8 +127,9 @@
                 <RespText size="sm" class="w-full px-8">
                     The second idea could be operationalized by getting able senior citizens and
                     others who are willing to volunteer to cook food, as well as by requesting local
-                    residents and wealthy donors to donate food. Flyers (created on Canva) such as
-                    the following can be part of the scalable community-driven campaign:
+                    residents and wealthy donors to donate food. Flyers (customized for this project
+                    on Canva) such as the following can be part of the scalable community-driven
+                    campaign:
                 </RespText>
                 <div class="flex h-full w-full grow">
                     <PhotoRoll
@@ -141,7 +138,6 @@
                             {
                                 src: FoodDriveImage,
                                 alt: 'Prototypes of flyers that could be used to campaign for food drives at the aforementioned community kitchen idea.',
-                                withCaption: true,
                             },
                         ]"
                     />
@@ -247,14 +243,27 @@
                 <RespText as="h3" size="sm" class="px-8 font-bold">
                     A poster featuring the schedule of ‘Food Share’ (created on Canva):
                 </RespText>
-                <PhotoRoll
-                    :images="[
-                        {
-                            src: FoodBus,
-                            alt: 'A poster featuring the schedule of ‘Food Share’ (created on Canva)',
-                        },
-                    ]"
-                />
+
+                <div class="flex h-full w-full grow">
+                    <PhotoRoll
+                        class="h-full"
+                        :images="[
+                            {
+                                src: FoodBus,
+                                alt: 'Page 1 of the poster featuring the schedule of ‘Food Share’ (created on Canva)',
+                            },
+                        ]"
+                    />
+                    <PhotoRoll
+                        class="h-full"
+                        :images="[
+                            {
+                                src: FoodBus2,
+                                alt: 'Page 2 of the poster featuring the schedule of ‘Food Share’ (created on Canva)',
+                            },
+                        ]"
+                    />
+                </div>
             </div>
         </SnapSection>
     </div>
@@ -272,6 +281,7 @@ import CookForNeedy from '@/assets/images/projects/zero-hunger/cook-for-needy.pn
 import DiscountFoodApp from '@/assets/images/projects/zero-hunger/discount-food-app.png';
 import FoodShareMerged from '@/assets/images/projects/zero-hunger/food-share-merged.png';
 import FoodBus from '@/assets/images/projects/zero-hunger/food-bus.jpg';
+import FoodBus2 from '@/assets/images/projects/zero-hunger/food-bus-2.jpg';
 
 import PhotoRoll from '@/components/photo-reel/PhotoRoll.vue';
 

@@ -1,7 +1,7 @@
 <template>
     <SnapSection class="flex max-h-full flex-col justify-center gap-4 overflow-hidden p-8">
-        <RespText size="lg" class="font-light">
-            The interplay between ‘Lucifer’ and ‘Tou-wrist’
+        <RespText size="sm" class="font-bold">
+            The interplay between ‘Lucifer’ and ‘Tou-wrist’:
         </RespText>
         <div class="w-full self-center overflow-hidden">
             <ImageModaller :src="InterPlay2" alt="Empathy Map">

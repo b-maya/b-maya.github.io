@@ -1,7 +1,7 @@
 <template>
     <SnapSection class="flex max-h-full flex-col gap-4 overflow-hidden p-8">
-        <RespText size="lg" class="font-light"> Artefact 2: </RespText>
-        <RespText size="base" class="shrink">
+        <RespText size="sm" class="font-bold"> Artefact 2: </RespText>
+        <RespText size="sm" class="shrink">
             To investigate the impact of monitoring on outsiders, I designed a trackable wristband
             called <em>‘Tou-wrist’</em>, which would be given to every outsider who enters the
             imagined country and is advertised to the outside world as an

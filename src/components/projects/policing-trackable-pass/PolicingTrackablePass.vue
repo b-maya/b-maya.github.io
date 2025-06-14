@@ -14,33 +14,32 @@
             >
                 {{ POLICING_TRACKABLE_PASS_INFO.date }}
             </RespText>
-            <div class="flex h-full w-full grow flex-col justify-center">
-                <RespText size="lg" class="my-auto p-8 text-center">
+            <div class="flex h-full w-full grow flex-col justify-center gap-8 pb-4 xl:gap-16">
+                <RespText size="sm" class="px-8 text-center">
                     {{ POLICING_TRACKABLE_PASS_INFO.summary }}
+                </RespText>
+
+                <RespText size="sm" class="px-8">
+                    The assignment for the course ‘Design Research’ was divided into two parts.
+                </RespText>
+                <div class="flex w-full flex-col gap-4">
+                    <RespText size="sm" class="px-8 font-bold"> Part 1: Group Assignment </RespText>
+                    <RespText size="sm" class="px-8">
+                        The first part was a group assignment was to pick a sub-theme within
+                        ‘Politics and Democracy’ and create a provocative futuristic artefact. We
+                        then had to conduct focus groups for user research, and gather reactions and
+                        comments about the artefact from the focus group participants.
+                    </RespText>
+                </div>
+                <RespText size="sm" class="px-8">
+                    The sub-theme <em>‘censorship in authoritarian regimes’</em> was chosen.
                 </RespText>
             </div>
         </SnapSection>
 
-        <SnapSection class="flex flex-col justify-center gap-8 xl:gap-16">
-            <RespText size="base" class="px-8">
-                The assignment for the course ‘Design Research’ was divided into two parts.
-            </RespText>
-            <div class="flex w-full flex-col gap-4">
-                <RespText size="lg" class="px-8 font-light"> Part 1: Group Assignment </RespText>
-                <RespText size="base" class="px-8">
-                    The first part was a group assignment was to pick a sub-theme within ‘Politics
-                    and Democracy’ and create a provocative futuristic artefact. We then had to
-                    conduct focus groups for user research, and gather reactions and comments about
-                    the artefact from the focus group participants.
-                </RespText>
-            </div>
-            <RespText size="base" class="px-8">
-                The sub-theme <em>‘censorship in authoritarian regimes’</em> was chosen.
-            </RespText>
-        </SnapSection>
         <SnapSection class="flex flex-col justify-center gap-4">
-            <RespText size="lg" class="px-8 font-light"> Research Question: </RespText>
-            <RespText size="base" class="px-8">
+            <RespText size="sm" class="px-8 font-bold"> Research Question: </RespText>
+            <RespText size="sm" class="px-8">
                 How would people perceive and internalise the ethical implications of government
                 manipulation of visual and auditory stimuli as a form of mass surveillance and
                 control?

@@ -1,25 +1,33 @@
 <template>
-    <div ref="photoRef" class="relative shrink-0 snap-center first:ml-10 last:mr-10">
-        <ImageModaller :src="image.src" :alt="image.alt">
-            <template #default="{ showModal }">
-                <img
-                    ref="imageRef"
-                    class="shrink-0 cursor-pointer rounded-lg object-contain"
-                    :src="image.src"
-                    :alt="image.alt"
-                    :style="photoStyle"
-                    @click="showModal"
-                />
-            </template>
-        </ImageModaller>
+    <div ref="photoRef" class="shrink-0 snap-center first:ml-10 last:mr-10">
+        <div class="relative">
+            <ImageModaller :src="image.src" :alt="image.alt">
+                <template #default="{ showModal }">
+                    <img
+                        ref="imageRef"
+                        class="shrink-0 cursor-pointer rounded-lg object-contain"
+                        :src="image.src"
+                        :alt="image.alt"
+                        :style="photoStyle"
+                        @click="showModal"
+                    />
+                </template>
+            </ImageModaller>
+        </div>
+        <Transition
+            appear-from-class="opacity-0"
+            appear-active-class="transition-all duration-1000 delay-500"
+            appear-to-class="opacity-0"
+        >
+            <RespText
+                v-if="image.withCaption && showCaption"
+                size="xs"
+                class="bg-primary/80 pointer-events-none absolute bottom-0 left-1/2 mx-2 w-9/10 -translate-x-1/2 rounded-t-lg px-1 py-1 text-center leading-5 text-black"
+            >
+                {{ image.alt }}
+            </RespText>
+        </Transition>
     </div>
-    <RespText
-        v-if="image.withCaption"
-        size="xs"
-        class="bg-primary/80 pointer-events-none absolute bottom-0 left-1/2 mx-auto -translate-x-1/2 rounded-t-lg py-1 text-center leading-5 text-black"
-    >
-        {{ image.alt }}
-    </RespText>
 </template>
 
 <script setup lang="ts">
@@ -60,6 +68,8 @@ const imageRef = ref<HTMLImageElement>();
 
 const photoDim = reactive<PhotoDim>({ height: 0, width: 0 });
 
+const showCaption = ref(false);
+
 const calculateDim = () => {
     if (!props.parentHeight || !props.parentWidth || !imageRef.value) {
         photoDim.height = 0;
@@ -95,8 +105,11 @@ const photoStyle = computed(() =>
 const observer = new IntersectionObserver(
     ([entry]) => {
         if (entry.isIntersecting && imageRef.value) {
+            showCaption.value = true;
             emits('scrolledTo', photoDim);
+            return;
         }
+        showCaption.value = false;
     },
     {
         threshold: 0.5,

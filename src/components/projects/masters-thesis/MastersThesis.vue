@@ -14,35 +14,35 @@
             >
                 {{ MASTERS_THESIS_INFO.date }}
             </RespText>
-            <div class="flex h-full w-full grow flex-col justify-center">
-                <RespText size="lg" class="my-auto p-8 text-center">
+            <div class="flex h-full w-full grow flex-col justify-center gap-8 py-4 xl:gap-16">
+                <RespText size="sm" class="px-8 text-center">
                     Exploring the potential of eliciting counterfactual evidence about polycystic
                     ovary syndrome (PCOS) through co-design, to inform educational practices.
+                </RespText>
+                <p class="px-8">
+                    <RespText as="h2" size="sm" class="inline font-bold whitespace-nowrap">
+                        Introduction:
+                    </RespText>
+                    <RespText size="sm">
+                        Medical conditions such as polycystic ovary syndrome (PCOS) that affect only
+                        women are seldom topics of everyday discussion, despite being a common
+                        occurrence. PCOS not only affects women’s menstrual health but also impacts
+                        their day-to-day routines, mental wellbeing, and long-term physical health
+                        with risks of diabetes and cardiovascular diseases.
+                    </RespText>
+                </p>
+                <RespText size="sm" class="px-8">
+                    This thesis explored a novel co-design process with counterfactual scenarios, a
+                    speculative critical design (SCD) tool, to evoke empathy about PCOS symptoms and
+                    experiences, in a way that could be adapted in educational settings. The method
+                    included two studies: (1) semi-structured interviews with women with PCOS to
+                    understand their experiences and (2) a classroom-like focus group where
+                    participants observed SCD research probes and engaged in a co-design activity,
+                    creating counterfactual artefacts.
                 </RespText>
             </div>
         </SnapSection>
 
-        <SnapSection class="flex flex-col justify-center gap-8 xl:gap-16">
-            <RespText as="h2" size="lg" class="px-8 font-light whitespace-nowrap">
-                Introduction
-            </RespText>
-            <RespText size="base" class="px-8">
-                Medical conditions such as polycystic ovary syndrome (PCOS) that affect only women
-                are seldom topics of everyday discussion, despite being a common occurrence. PCOS
-                not only affects women’s menstrual health but also impacts their day-to-day
-                routines, mental wellbeing, and long-term physical health with risks of diabetes and
-                cardiovascular diseases.
-            </RespText>
-            <RespText size="base" class="px-8">
-                This thesis explored a novel co-design process with counterfactual scenarios, a
-                speculative critical design (SCD) tool, to evoke empathy about PCOS symptoms and
-                experiences, in a way that could be adapted in educational settings. The method
-                included two studies: (1) semi-structured interviews with women with PCOS to
-                understand their experiences and (2) a classroom-like focus group where participants
-                observed SCD research probes and engaged in a co-design activity, creating
-                counterfactual artefacts.
-            </RespText>
-        </SnapSection>
         <ResearchDetailsI />
         <ResearchDetailsII />
         <ResearchQuestion />

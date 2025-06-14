@@ -19,7 +19,9 @@
                     <RespText size="xs" class="pt-4 text-center">
                         {{ FUTURES_WHEEL_INFO.title_sub }}
                     </RespText>
-                    <div class="flex items-center gap-4 lg:gap-8 xl:gap-16">
+                    <div
+                        class="flex w-3/4 justify-center gap-4 self-center lg:gap-8 xl:gap-16 xl:px-8"
+                    >
                         <div class="w-full">
                             <RespText as="h2" size="sm" class="inline font-bold">
                                 Process Followed:
@@ -50,31 +52,26 @@
                         <RespText as="span" size="sm">
                             This is a speculative critical design project with an imagined
                             futuristic prototype, the consequences of which are speculated using a
-                            futures wheel.
-                            <a
-                                :href="`#${brochureImages[0].alt.replace(/\s+/g, '-')}`"
-                                class="rounded-md px-0.5 py-1 text-violet-950 underline underline-offset-3 transition-all hover:bg-violet-400 hover:text-white"
-                                >The prototype is a pair of smart glasses</a
-                            >
-                            that identifies misogynists based on facial recognition and online
-                            presence. Here’s a
+                            futures wheel. The prototype is a pair of smart glasses that identifies
+                            misogynists based on facial recognition and online presence. Here’s a
                             <strong>
-                                Futures Wheel that shows possible consequences of such
-                                technology</strong
+                                <a
+                                    href="#futures-wheel-image"
+                                    class="rounded-md px-0.5 py-1 text-violet-950 underline underline-offset-3 transition-all hover:bg-violet-400 hover:text-white"
+                                    >Futures Wheel</a
+                                >
+                                that shows possible consequences of such technology</strong
                             >.
                         </RespText>
                     </p>
                 </div>
-                <PhotoRoll :images="coverImage" />
             </div>
         </SnapSection>
-        <SnapSection
-            v-for="image in brochureImages"
-            :key="image.alt"
-            :id="image.alt.replace(/\s+/g, '-')"
-            class="flex flex-col justify-center gap-8 pb-4 xl:gap-16"
-        >
-            <PhotoRoll class="mt-4" :images="[image]" />
+
+        <SnapSection class="flex flex-col">
+            <div id="futures-wheel-image" class="flex h-full w-full flex-col justify-center pt-4">
+                <PhotoRoll :images="coverImage" />
+            </div>
         </SnapSection>
     </div>
 </template>
@@ -86,13 +83,6 @@ import SnapSection from '../../SnapSection.vue';
 
 import PhotoRoll from '@/components/photo-reel/PhotoRoll.vue';
 
-import Brochure3 from '@/assets/images/projects/futures-wheel/brochure/3.png';
-import Brochure4 from '@/assets/images/projects/futures-wheel/brochure/4.png';
-import Brochure5 from '@/assets/images/projects/futures-wheel/brochure/5.png';
-import Brochure6 from '@/assets/images/projects/futures-wheel/brochure/6.png';
-import Brochure7 from '@/assets/images/projects/futures-wheel/brochure/7.png';
-import Brochure8 from '@/assets/images/projects/futures-wheel/brochure/8.png';
-
 defineOptions({
     name: 'StopMakingExcuses',
 });
@@ -101,33 +91,6 @@ const coverImage = [
     {
         src: FUTURES_WHEEL_INFO.img,
         alt: FUTURES_WHEEL_INFO.imgAlt,
-    },
-];
-
-const brochureImages = [
-    {
-        src: Brochure3,
-        alt: 'Brochure page 1',
-    },
-    {
-        src: Brochure4,
-        alt: 'Brochure page 2',
-    },
-    {
-        src: Brochure5,
-        alt: 'Brochure page 3',
-    },
-    {
-        src: Brochure6,
-        alt: 'Brochure page 4',
-    },
-    {
-        src: Brochure7,
-        alt: 'Brochure page 5',
-    },
-    {
-        src: Brochure8,
-        alt: 'Brochure page 6',
     },
 ];
 </script>
